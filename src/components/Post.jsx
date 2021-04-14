@@ -2,31 +2,32 @@ import React, { useEffect, useState } from 'react';
 import axios from '../axios';
 import requests from '../requests';
 
-const Post = () => {
-    const [content, setContent] = useState([]);
+const Post = ( {postId} ) => {
+    const [post, setPost] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
-            const postRequest = await axios.get(requests.fetchPosts);
+            const postRequest = await axios.get(addPostIdToUrl(requests.fetchAllPosts, postId));
             const blogRequest = await axios.get(requests.fetchBlog);
-            console.log(blogRequest);
-            console.log(postRequest);
-            console.log(blogRequest.data.posts.totalItems-1);
-            setContent(
-                //TODO 10 per site 
-                //postRequest.data.items[Math.floor(Math.random()*blogRequest.data.posts.totalItems-1)].content
-                postRequest.data.items[Math.floor(Math.random()*10)].content
+            setPost(
+                postRequest.data
             );
-            return postRequest;
+            return postRequest.data;
         }
         fetchData();
     }, []);
 
     return (
         <div>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div dangerouslySetInnerHTML={{ __html: post.title }} />
         </div>
     )
+}
+
+const addPostIdToUrl = (url, postId) => {
+    let part = (url+'').split('?');
+    part[0] = part[0].concat(`/${postId}?`);
+    return part[0].concat(part[1]);
 }
 
 export default Post
