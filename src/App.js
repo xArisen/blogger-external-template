@@ -3,41 +3,52 @@ import axios from './axios';
 import Post from './components/Post'
 import requests from './requests';
 import React, { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button'
+
+let postsNumber = 0;
 
 function App() {
   const [allPosts, setPosts] = useState([]);
-
-  let postsNumber = 0;
+  const [nextPageToken, setNextPageToken] = useState("");
   useEffect(() => {
     async function fetchData() {
-        const allPostsRequest = await axios.get(requests.fetchAllPosts);
+        const allPostsRequest = nextPageToken.length>0 ? await axios.get(requests.fetchAllPosts +`&pageToken=${nextPageToken}`) : await axios.get(requests.fetchAllPosts);
         const blogRequest = await axios.get(requests.fetchBlog);
-        postsNumber = blogRequest.data.posts.totalItems-1;
-        console.log(allPostsRequest.data);
         setPosts(
-            allPostsRequest.data
+            allPostsRequest.data.items
         );
+        setNextPageToken(
+            allPostsRequest.data.nextPageToken
+        );
+        postsNumber = allPosts.length;
         return allPostsRequest.data;
     }
     fetchData();
 }, []);
 
-const createAllPosts = (allPosts) =>{
-  return (
-    <div>
-      {allPosts.items.map(item => <Post postId={item.id}/>)}
-    </div>
-  );
-} 
-
-
   return (
     <div className="App">
-      {createAllPosts(allPosts)}
-      <Post postId="1662686373753401005"/>
+      {
+        allPosts.length? (
+          createAllPosts(allPosts)
+        ) : (
+          <Post postId="1662686373753401005"/>
+        )
+      }
     </div>
   );
 }
 
+
+
+const createAllPosts = (allPosts) =>{
+    let result =
+    <div>
+      {allPosts.map(item => <Post postId={item.id}/>)}
+    </div>;
+  return (
+    result
+  );
+} 
 
 export default App;
