@@ -1,6 +1,6 @@
-.postMiniature{
+.postminiature-custom-border-box{
     border: 2px black solid;
-    width: 600px;
+    width: 500px;
     margin: 10px auto;
     text-align: center;
 }

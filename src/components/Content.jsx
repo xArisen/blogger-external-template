@@ -1,12 +1,11 @@
 import React from 'react'
 import MainContent from './MainContent'
-import Sidebar from './Sidebar'
+import '../styles/Content.css';
 
 function Content() {
     return (
-        <div>
+        <div className="content-custom-border-box">
             <MainContent/>
-            <Sidebar/>
         </div>
     )
 }

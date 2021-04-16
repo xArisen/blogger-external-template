@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../axios';
 import requests from '../requests';
+import '../styles/Post.css';
 
 const Post = ( {postId} ) => {
     const [post, setPost] = useState([]);
@@ -18,7 +19,7 @@ const Post = ( {postId} ) => {
     }, []);
 
     return (
-        <div>
+        <div className = "post-custom-border-box">
             <div dangerouslySetInnerHTML={{ __html: post.title }} />
         </div>
     )

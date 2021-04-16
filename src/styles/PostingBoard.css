@@ -1,0 +1,10 @@
+.postingboard-custom-border-box{
+    border: black 2px solid;
+    background-color: burlywood;
+    width: 40%;
+}
+
+.posts-chunk-10{
+    display: flex;
+    flex-wrap: wrap;
+}

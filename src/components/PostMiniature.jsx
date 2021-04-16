@@ -3,7 +3,7 @@ import '../styles/PostMiniature.css'
 
 function PostMiniature({postId, postTitle, postContent}) {
     return (
-        <div className="postMiniature">
+        <div className="postminiature-custom-border-box">
             <div dangerouslySetInnerHTML={{ __html: postTitle }} />
             <div dangerouslySetInnerHTML={{ __html: postContent }} />
         </div>
