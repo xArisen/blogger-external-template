@@ -56,7 +56,7 @@ function MainContent() {
 const createAllPosts = (allPosts) =>{
     let result =
     <div className="posts-chunk-10">
-      {allPosts.map((item, index) => <PostMiniature key={index+postsNumber} postId={item.id} postTitle={item.title} postContent={item.content}/>)}
+      {allPosts.map((item, index) => <PostMiniature key={index+postsNumber} postId={item.id} postTitle={item.title} postContent={item.content} postPublishDate={item.published}/>)}
     </div>;
   return (
     result

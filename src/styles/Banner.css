@@ -1,3 +1,10 @@
 .banner-custom-border-box{
     border: black 2px solid;
+    background: url('sandrowata-banner.png');
+    background-size: 1000px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -250px;
+    height: 200px;
 }

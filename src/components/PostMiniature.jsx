@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/PostMiniature.css'
 
-function PostMiniature({postId, postTitle, postContent}) {
+function PostMiniature({postId, postTitle, postContent, postPublishDate}) {
 
     const getPostFirstImg = (postContent) =>{
         let elem = document.createElement('div');
@@ -19,12 +19,15 @@ function PostMiniature({postId, postTitle, postContent}) {
         document.body.appendChild(elem);
         elem.innerHTML = postContent;
         elem = elem.querySelector('div');
-        let cutDown = true;
         let firstLine = elem.innerHTML.substr(0, elem.innerHTML.indexOf('<'));
         if(!firstLine){
             firstLine = elem.innerHTML;
         }
         return firstLine+"...";
+    }
+
+    const refactorPostPublishDate = (postPublishDate) => {
+        return postPublishDate.substr(0, postPublishDate.indexOf('T'));
     }
 
     return (
@@ -33,6 +36,7 @@ function PostMiniature({postId, postTitle, postContent}) {
             <div className = "h5 postminiature-custom-title" dangerouslySetInnerHTML={{ __html: postTitle }} />
             <div className = "postminiature-custom-text">{getPostFirstLineOfText(postContent)}</div>
             <br/><br/>
+            <div className = "postminiature-custom-publishdate"><p class="">📅 {refactorPostPublishDate(postPublishDate)}</p></div>
             <button className="postminiature-custom-button">Czytaj dalej</button>
         </div>
     )

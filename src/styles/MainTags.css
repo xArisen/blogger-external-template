@@ -1,3 +1,9 @@
 .maintags-custom-border-box{
     border: black 2px solid;
 }
+
+.maintags-custom-tagspackage{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}

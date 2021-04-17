@@ -4,7 +4,9 @@ import '../styles/MainTags.css';
 function MainTags() {
     return (
         <div className="maintags-custom-border-box">
-            <h1>Hi! We are main tags!</h1>
+            <div className="maintags-custom-tagspackage">
+                <h1>Hi! We are main tags!</h1>
+            </div>
         </div>
     )
 }
