@@ -2,7 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     border: black 2px solid;
-    width: 60vw;
+    width: 1200px;
     justify-content: center;
     margin: auto;
+}
+
+@media screen and (max-width: 992px){
+    .maincontent-custom-border-box{
+        width: 100%;
+    }
 }

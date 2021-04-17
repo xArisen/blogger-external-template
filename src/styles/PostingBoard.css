@@ -1,10 +1,15 @@
 .postingboard-custom-border-box{
     border: black 2px solid;
-    background-color: burlywood;
-    width: 40%;
+    width: 70%;
 }
 
 .posts-chunk-10{
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px){
+    .postingboard-custom-border-box{
+        width: 100%;
+    }
 }

@@ -2,5 +2,5 @@
     display: flexbox;
     border: black 2px solid;
     float: left;
-    min-width: 250px;
+    width: 30%;
 }
