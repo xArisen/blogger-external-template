@@ -31,7 +31,7 @@ function PostMiniature({postId, postTitle, postContent, postPublishDate}) {
     }
 
     return (
-        <div className="postminiature-custom-border-box">
+        <div className="postminiature-custom-border-box border-bottom">
             {getPostFirstImg(postContent)}
             <div className = "h5 postminiature-custom-title" dangerouslySetInnerHTML={{ __html: postTitle }} />
             <div className = "postminiature-custom-text">{getPostFirstLineOfText(postContent)}</div>

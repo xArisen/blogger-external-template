@@ -1,3 +1,6 @@
 :root{
-    --primary-color: hsl(196, 78%, 61%);
+    --primary-color: #4ec0e9;
+    --secondary-color: #fa74b3;
+    --third-color: #ffffff;
+    --fourth-color: #50514F;
 }

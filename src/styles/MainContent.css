@@ -1,7 +1,6 @@
 .maincontent-custom-border-box{
     display: flex;
     flex-wrap: wrap;
-    border: black 2px solid;
     width: 1200px;
     justify-content: center;
     margin: auto;

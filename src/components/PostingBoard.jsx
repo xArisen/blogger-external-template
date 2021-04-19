@@ -4,6 +4,7 @@ import requests from '../requests';
 import Post from './Post'
 import PostMiniature from './PostMiniature'
 import '../styles/PostingBoard.css';
+import BigPostMiniature from './BigPostMiniature';
 
 let postsNumber = 0;
 function MainContent() {
@@ -54,10 +55,16 @@ function MainContent() {
 
 
 const createAllPosts = (allPosts) =>{
-    let result =
+  let result =
+  <div>
+    <h1 className="postingboard-custom-mainpost-title">Hello</h1>
     <div className="posts-chunk-10">
-      {allPosts.map((item, index) => <PostMiniature key={index+postsNumber} postId={item.id} postTitle={item.title} postContent={item.content} postPublishDate={item.published}/>)}
-    </div>;
+      {<BigPostMiniature key={0} postId={allPosts[0].id} postTitle={allPosts[0].title} postContent={allPosts[0].content} postPublishDate={allPosts[0].published}/>}
+    </div>
+    <div className="posts-chunk-10">
+      {allPosts.slice(1).map((item, index) => <PostMiniature key={index+postsNumber+1} postId={item.id} postTitle={item.title} postContent={item.content} postPublishDate={item.published}/>)}
+    </div>
+  </div>;
   return (
     result
   );
