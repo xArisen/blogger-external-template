@@ -1,10 +1,8 @@
 .postingboard-custom-border-box{
-    border: black 2px solid;
     width: 70%;
 }
 
 .posts-chunk-10{ 
-    transition: 0.3s;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -14,8 +12,4 @@
     .postingboard-custom-border-box{
         width: 100%;
     }
-}
-
-.postingboard-custom-mainpost-title{
-    margin-left: 1vw;
 }

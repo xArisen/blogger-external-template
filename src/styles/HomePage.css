@@ -1,4 +1,5 @@
 .homepage-custom-border-box{
     display: flex;
     flex-direction: column;
+    background: var(--third-color);
 }

@@ -36,6 +36,7 @@ function BigPostMiniature({postId, postTitle, postContent, postPublishDate}) {
 
     return (
         <div className="bigpostminiature-custom-border-box border-bottom">
+            <p className="bigpostminiature-custom-mainpost-hint">Najnowszy post!</p>
             {getPostFirstImg(postContent)}
             <div className = "h5 bigpostminiature-custom-title" dangerouslySetInnerHTML={{ __html: postTitle }} />
             <div className = "bigpostminiature-custom-text">{getPostFirstLineOfText(postContent)}</div>

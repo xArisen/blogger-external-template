@@ -59,8 +59,43 @@
     transition: 0.3s !important;
     --btn-color: var(--btn-bg) !important;
     --btn-border-color: var(--btn-bg) !important;
-    --btn-bg: var(--secondary-color) !important;
-    --btn-border: 1px solid var(--secondary-color) !important;
+    --btn-bg: var(--primary-color) !important;
+    --btn-border: 1px solid var(--primary-color) !important;
     background: 0 0 !important;
     transition: .3s !important;
+}
+
+@media screen and (max-width: 780px), (max-width: 1108px) and (min-width: 993px){
+
+    .postminiature-custom-border-box{
+    transition: 2s !important;
+    transition: width 2s;
+    position: relative;
+    width: 720px;
+    margin: 80px 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    }   
+
+
+    .postminiature-custom-photo{
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .postminiature-custom-title{
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+        font-size: 30px !important;
+    }
+
+    .postminiature-custom-text{
+        width: 100%;
+        margin: 20px auto;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 20px;
+    }
 }

@@ -57,7 +57,6 @@ function MainContent() {
 const createAllPosts = (allPosts) =>{
   let result =
   <div>
-    <h1 className="postingboard-custom-mainpost-title">Hello</h1>
     <div className="posts-chunk-10">
       {<BigPostMiniature key={0} postId={allPosts[0].id} postTitle={allPosts[0].title} postContent={allPosts[0].content} postPublishDate={allPosts[0].published}/>}
     </div>
