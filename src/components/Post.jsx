@@ -9,7 +9,6 @@ const Post = ( {postId} ) => {
     useEffect(() => {
         async function fetchData() {
             const postRequest = await axios.get(addPostIdToUrl(requests.fetchAllPosts, postId));
-            const blogRequest = await axios.get(requests.fetchBlog);
             setPost(
                 postRequest.data
             );
