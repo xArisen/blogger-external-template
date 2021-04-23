@@ -1,10 +1,13 @@
 import React from 'react'
 import '../styles/Sidebar.css';
+import MiniBio from './MiniBio';
 
 function SideBar() {
     return (
         <div className="sidebar-custom-border-box">
-            <h1>Hi! I'm Sidebar!</h1>
+            <div className="sidebar-custom-element-box">
+                <MiniBio/>
+            </div>
         </div>
     )
 }

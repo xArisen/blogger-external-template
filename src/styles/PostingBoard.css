@@ -1,5 +1,6 @@
 .postingboard-custom-border-box{
     width: 70%;
+    border: 2px solid black;
 }
 
 .posts-chunk-10{ 

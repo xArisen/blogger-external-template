@@ -5,7 +5,15 @@ function MainTags() {
     return (
         <div className="maintags-custom-border-box">
             <div className="maintags-custom-tagspackage">
-                <h1>Hi! We are main tags!</h1>
+                <div className="maintags-custom-tagpackage">
+                    Psy
+                </div>
+                <div className="maintags-custom-tagpackage">
+                    Koty
+                </div>
+                <div className="maintags-custom-tagpackage">
+                    Śledzie
+                </div>
             </div>
         </div>
     )

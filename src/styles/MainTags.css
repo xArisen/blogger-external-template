@@ -4,6 +4,13 @@
 
 .maintags-custom-tagspackage{
     width: 500px;
+    display: flex;
+    justify-content: center;
     margin: auto;
     text-align: center;
+}
+
+.maintags-custom-tagpackage{
+    margin: 0 10px;
+    font-size: 20px;
 }
